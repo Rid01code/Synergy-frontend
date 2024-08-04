@@ -41,7 +41,7 @@ jobs:
     - name: Deploy to Azure Web App
       run: |
         az webapp deploy --resource-group alamgir --name synergy-webApp2 --src-path build.zip --type zip
-        az webapp config appsettings set --resource-group alamgir --name synergy-webApp2 --settings WEBSITE_NODE_DEFAULT_VERSION=20 WEBSITE_RUN_FROM_PACKAGE=1 PORT_URL=https://synergy-api.vercel.app/ NEXT_PUBLIC_SOCKET_URL=synergyapi-production.up.railway.app
+        az webapp config appsettings set --resource-group alamgir --name synergy-webApp --settings WEBSITE_NODE_DEFAULT_VERSION=20 WEBSITE_RUN_FROM_PACKAGE=1 PORT_URL=https://synergy-api.vercel.app/ NEXT_PUBLIC_SOCKET_URL=synergyapi-production.up.railway.app
       env:
         AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
