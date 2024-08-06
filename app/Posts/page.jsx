@@ -4,6 +4,7 @@ import axios from 'axios'
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from "../../styles/allcss.module.css"
+import { FaUserCircle } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { useStore, useSelector } from 'react-redux';
 import { authActions } from '@/Store/Auth';
@@ -134,12 +135,14 @@ function posts() {
           onSubmit={handleSubmit}
         >
           <div className='flex items-center justify-around gap-2 border-b-2 border-b-gray-300 pb-2'>
-            <div className='w-12 h-12 rounded-full overflow-hidden'>
-              <img
+            <div className='w-14 h-14 rounded-full overflow-hidden'>
+              {userProfilePic ? (<img
               src={userProfilePic}
               alt='profilePic'
               className='object-cover w-full h-full'
-              />
+              />)
+              :(<FaUserCircle
+                size={40}/>)}
             </div>
             <input
               type='text'
