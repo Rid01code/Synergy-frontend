@@ -39,8 +39,8 @@ jobs:
           app_settings: |
             WEBSITE_NODE_DEFAULT_VERSION=~18.17.0
         env:
-          PORT_URL: "https://synergy-api.vercel.app/"
-          NEXT_PUBLIC_SOCKET_URL: "synergyapi-production.up.railway.app"
+          PORT_URL: "https://synergy-api-h8azdxeudgf6c3dp.eastus-01.azurewebsites.net/"
+          NEXT_PUBLIC_SOCKET_URL: "https://synergy-api-h8azdxeudgf6c3dp.eastus-01.azurewebsites.net"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
